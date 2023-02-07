@@ -9,8 +9,8 @@ def decode(inp: str):
         tmp = ""
         j = 0
         while i < len(inp):
-            if j > 16:
-                return "失败了"
+            if j > 7:
+                return "鸡翻译失败了，你说的不是鸡语吧"
             tmp += inp[i]
             i += 1
             j += 1
@@ -19,8 +19,8 @@ def decode(inp: str):
                 bits.append(map.terminologies.index(tmp))
                 break
     bytesGroup = []
-    for i in range(0, len(bits), 3):
-        bytesGroup.append(64*bits[i]+8*bits[i+1]+bits[i+2])
+    for i in range(0, len(bits), 2):
+        bytesGroup.append(16*bits[i]+bits[i+1])
     result = str(bytes(bytesGroup), "utf-8")
     return result
 

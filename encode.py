@@ -7,9 +7,9 @@ def encode(inp: str):
     for i in inp:
         byte = i
         tmp = ""
-        for j in range(3):
-            tmp = map.terminologies[byte % 8] + tmp
-            byte //= 8
+        for j in range(2):
+            tmp = map.terminologies[byte % 16] + tmp
+            byte //= 16
         result += tmp
     return result
 
