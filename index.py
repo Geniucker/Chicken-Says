@@ -1,6 +1,7 @@
 import flask
 import encode
 import decode
+from gevent import pywsgi
 
 
 app = flask.Flask(__name__)
@@ -31,4 +32,8 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=443, debug=True)
+    # Debug
+    # app.run(host="0.0.0.0", port=443, debug=True)
+    # Production
+    server = pywsgi.WSGIServer(('0.0.0.0', 443), app)
+    server.serve_forever()
