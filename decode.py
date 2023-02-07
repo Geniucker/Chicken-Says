@@ -10,7 +10,7 @@ def decode(inp: str):
         j = 0
         while i < len(inp):
             if j > 7:
-                return "鸡翻译失败了，你说的不是鸡语吧"
+                return "鸡不理解，你说的不是鸡语吧"
             tmp += inp[i]
             i += 1
             j += 1
