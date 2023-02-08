@@ -6,7 +6,7 @@ window.onload = function() {
 
 
     btn1.onclick = function() {
-        inp2.value = "鸡正在思考，请稍后..."
+        inp2.value = "鸡神正在思考，请稍后..."
         var httpRequest = new XMLHttpRequest();//第一步：创建需要的对象
         httpRequest.open('POST', 'encode', true); //第二步：打开连接
         httpRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");//设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
@@ -21,7 +21,7 @@ window.onload = function() {
         };
     }
     btn2.onclick = function() {
-        inp1.value = "鸡正在思考，请稍后..."
+        inp1.value = "鸡神正在思考，请稍后..."
         var httpRequest = new XMLHttpRequest();//第一步：创建需要的对象
         httpRequest.open('POST', 'decode', true); //第二步：打开连接
         httpRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");//设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
